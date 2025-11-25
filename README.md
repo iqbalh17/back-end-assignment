@@ -73,7 +73,10 @@ This API has documentation on Swagger UI.
 | :--- | :--- | :--- |
 | `/menu` | GET | Retrieves menu list. |
 | `/menu/search` | GET | Searches menu with filter & pagination. |
-| `/menu` | POST | Adds new menu (Trigger AI). |
+| `/menu` | POST | Adds new menu. |
+| `/menu/{id}` | DELETE | Delete menu with id. |
+| `/menu/{id}` | PUT | Edit menu with id. |
+| `/menu/group-by-category` | GET | Retrieve menus grouped by category. |
 | `/menu/{id}/health-check` | GET | Check health & allergy info (AI). |
 | `/menu/{id}/burn-it` | GET | Calorie burn calculator (AI). |
 
