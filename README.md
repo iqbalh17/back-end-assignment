@@ -58,7 +58,7 @@ This application has been deployed and can be accessed online without installati
 - **Base URL:** `https://your-app-name.onrender.com`
 - **API Documentation (Swagger UI):** [Click Here to Try API](https://your-app-name.onrender.com/docs)
 
-**⚠️ Important Note:**
+**Important Note:**
 Because it uses the **Render Free Tier** service, the server will restart if not accessed for 15 minutes.
 If you open the link above, the loading time might be a bit long (50+ seconds).
 
