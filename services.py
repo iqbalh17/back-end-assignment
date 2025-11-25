@@ -105,8 +105,6 @@ async def calculate_burn_activity(name: str, calories: int):
             text = text.replace("```json", "").replace("```", "")
         return json.loads(text)
     except Exception as e:
-        print(f"❌ ERROR GEMINI BURN CALORIES: {e}")
-        print(f"📄 TEXT DARI AI: {text if 'text' in locals() else 'Kosong'}")
         return {
             "exercises": [
                 {"activity": "Jalan Kaki", "duration": "60 mins", "intensity": "Low"}
