@@ -80,7 +80,9 @@ This API has documentation on Swagger UI.
 | `/menu/{id}/health-check` | GET | Check health & allergy info (AI). |
 | `/menu/{id}/burn-it` | GET | Calorie burn calculator (AI). |
 
-## How to Use AI Auto-Description & Auto-Calorie Counter
+
+
+### How to Use AI Auto-Description & Auto-Calorie Counter
 
 To trigger the automatic description generation by Google Gemini, simply set the `description` field to `"(AI)"` & set `calorie` to `0` when creating a new menu via the **POST** request.
 
@@ -92,5 +94,86 @@ To trigger the automatic description generation by Google Gemini, simply set the
   "price": 25000,
   "description": "(AI)",
   "ingredients": ["Rice", "Egg", "Chicken", "Soy Sauce"],
-  "calorie" : 0
+  "calories" : 0
 }
+```
+
+**Response with Auto-Description:**
+```json
+{
+    "message": "Menu created successfully",
+    "data": {
+        "price": 25000.0,
+        "id": 9,
+        "description": "Experience our exquisite Special Fried Rice, where fragrant jasmine rice is masterfully wok-tossed with tender chicken, delicate scrambled egg, and a whisper of our signature aged soy for a symphony of umami.",
+        "created_at": "2025-11-25T11:42:26.028604",
+        "calories": 820,
+        "name": "Special Fried Rice",
+        "category": "Food",
+        "ingredients": [
+            "Rice",
+            "Egg",
+            "Chicken",
+            "Soy Sauce"
+        ],
+        "updated_at": "2025-11-25T11:42:26.028615"
+    }
+}
+```
+### 2. AI Health Check
+To analyze allergens and health score, send a GET request with the specific Menu ID.
+
+- **Endpoint:** `/menu/{id}/health-check`
+
+- **Example:** `GET /menu/1/health-check`
+
+  **Response:**
+  ```json
+  {
+        "menu_name": "Special Fried Rice",
+        "allergens": [
+            "Egg",
+            "Soy",
+            "Gluten"
+        ],
+        "diet_labels": [
+            "High Protein",
+            "Dairy-Free"
+        ],
+        "health_score": 7,
+        "advice": "To boost health, consider adding more vegetables and requesting less soy sauce to reduce sodium and increase nutrients."
+  }
+  ```
+
+
+### 3. AI Exercise Calculator
+To calculate the exercise duration needed to burn the menu's calories, send a GET request with the specific Menu ID.
+
+- **Endpoint:** /menu/{id}/burn-it
+
+- **Example:** GET /menu/1/burn-it
+
+  **Response:**
+  ```json
+  {
+    "menu_name": "Special Fried Rice",
+    "calories": 820,
+    "exercises": [
+            {
+                "activity": "Running",
+                "duration": "75 mins",
+                "intensity": "Medium"
+            },
+            {
+                "activity": "Cycling",
+                "duration": "126 mins",
+                "intensity": "Low"
+            },
+            {
+                "activity": "Swimming",
+                "duration": "66 mins",
+                "intensity": "High"
+            }
+        ]
+    }  
+
