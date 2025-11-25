@@ -80,9 +80,9 @@ This API has documentation on Swagger UI.
 | `/menu/{id}/health-check` | GET | Check health & allergy info (AI). |
 | `/menu/{id}/burn-it` | GET | Calorie burn calculator (AI). |
 
+## How to use AI Features
 
-
-### How to Use AI Auto-Description & Auto-Calorie Counter
+### 1. AI Auto-Description & Auto-Calorie Counter
 
 To trigger the automatic description generation by Google Gemini, simply set the `description` field to `"(AI)"` & set `calorie` to `0` when creating a new menu via the **POST** request.
 
@@ -149,9 +149,9 @@ To analyze allergens and health score, send a GET request with the specific Menu
 ### 3. AI Exercise Calculator
 To calculate the exercise duration needed to burn the menu's calories, send a GET request with the specific Menu ID.
 
-- **Endpoint:** /menu/{id}/burn-it
+- **Endpoint:** `/menu/{id}/burn-it`
 
-- **Example:** GET /menu/1/burn-it
+- **Example:** `GET /menu/1/burn-it`
 
   **Response:**
   ```json
