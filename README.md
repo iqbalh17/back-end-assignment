@@ -3,8 +3,8 @@ Modern backend API for menu management powered by artificial intelligence (Googl
 ## Key Features
 
 -   **Complete Menu CRUD:** Menu data management (Create, Read, Update, Delete) with a database.
--   **AI Auto-Description:** AI automatically generates descriptions based on name & ingredients.
--   **AI Health Check:** Automatic analysis of allergen content, dietary labels (Vegan/Halal), and health scores.
+-   **AI Auto-Description & Aut-Calorie Counter :** AI automatically generates descriptions and calorie based on name & ingredients.
+-   **AI Health Check:** Automatic analysis of allergen content, dietary labels (Vegan/Dairy-Free), and health scores.
 -   **AI Exercise Calculator:** Calculates the estimated exercise needed to burn the menu's calories.
 -   **Search & Filter:** Advanced search based on price, category, and calories.
 
@@ -76,3 +76,18 @@ This API has documentation on Swagger UI.
 | `/menu` | POST | Adds new menu (Trigger AI). |
 | `/menu/{id}/health-check` | GET | Check health & allergy info (AI). |
 | `/menu/{id}/burn-it` | GET | Calorie burn calculator (AI). |
+
+## How to Use AI Auto-Description & Auto-Calorie Counter
+
+To trigger the automatic description generation by Google Gemini, simply set the `description` field to `"(AI)"` & set `calorie` to `0` when creating a new menu via the **POST** request.
+
+**Example Request Body:**
+```json
+{
+  "name": "Special Fried Rice",
+  "category": "Food",
+  "price": 25000,
+  "description": "(AI)",
+  "ingredients": ["Rice", "Egg", "Chicken", "Soy Sauce"],
+  "calorie" : 0
+}
