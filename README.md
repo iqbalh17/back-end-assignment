@@ -5,7 +5,7 @@ Modern backend API for menu management powered by artificial intelligence (Googl
 -   **Complete Menu CRUD:** Menu data management (Create, Read, Update, Delete) with a database.
 -   **AI Auto-Description & Aut-Calorie Counter :** AI automatically generates descriptions and calorie based on name & ingredients.
 -   **AI Health Check:** Automatic analysis of allergen content, dietary labels (Vegan/Dairy-Free), and health scores.
--   **AI Exercise Calculator:** Calculates the estimated exercise needed to burn the menu's calories.
+-   **AI Burn-it Calculator:** Calculates the estimated exercise needed to burn the menu's calories.
 -   **Search & Filter:** Advanced search based on price, category, and calories.
 
 ## Technologies Used
@@ -14,7 +14,7 @@ Modern backend API for menu management powered by artificial intelligence (Googl
 -   **Database:** SQLite (Local) / PostgreSQL (Production)
 -   **AI Model:** Google Gemini 2.5 Flash
 -   **ORM:** SQLModel (SQLAlchemy wrapper)
--   **Deployment:** Render.com
+-   **Deployment:** vercel.com
 
 ## How to Run (Localhost)
 
@@ -55,19 +55,15 @@ Modern backend API for menu management powered by artificial intelligence (Googl
 
 This application has been deployed and can be accessed online without installation.
 
-- **Base URL:** `https://your-app-name.onrender.com`
-- **API Documentation (Swagger UI):** [Click Here to Try API](https://your-app-name.onrender.com/docs)
-
-**Important Note:**
-Because it uses the **Render Free Tier** service, the server will restart if not accessed for 15 minutes.
-If you open the link above, the loading time might be a bit long (50+ seconds).
+- **Base URL:** `https://menu-api-beta.vercel.app`
+- **API Documentation (Swagger UI):** [Click Here to Try API](https://menu-api-beta.vercel.app/docs)
 
 ---
 
 ## API Documentation
 
 This API has documentation on Swagger UI.
-**[Click Here to Open Complete Documentation](LINK_RENDER/docs)**
+**[Click Here to Open Complete Documentation](https://menu-api-beta.vercel.app/docs)**
 
 | Endpoint | Method | Description |
 | :--- | :--- | :--- |
@@ -146,7 +142,7 @@ To analyze allergens and health score, send a GET request with the specific Menu
   ```
 
 
-### 3. AI Exercise Calculator
+### 3. AI Burn-it Calculator
 To calculate the exercise duration needed to burn the menu's calories, send a GET request with the specific Menu ID.
 
 - **Endpoint:** `/menu/{id}/burn-it`
