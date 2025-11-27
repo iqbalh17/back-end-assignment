@@ -3,7 +3,7 @@ Modern backend API for menu management powered by artificial intelligence (Googl
 ## Key Features
 
 -   **Complete Menu CRUD:** Menu data management (Create, Read, Update, Delete) with a database.
--   **AI Auto-Description & Aut-Calorie Counter :** AI automatically generates descriptions and calorie based on name & ingredients.
+-   **AI Auto-Description & Auto-Calorie Counter :** AI automatically generates descriptions and calorie based on name & ingredients.
 -   **AI Health Check:** Automatic analysis of allergen content, dietary labels (Vegan/Dairy-Free), and health scores.
 -   **AI Burn-it Calculator:** Calculates the estimated exercise needed to burn the menu's calories.
 -   **Search & Filter:** Advanced search based on price, category, and calories.
