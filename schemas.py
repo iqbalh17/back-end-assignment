@@ -36,11 +36,12 @@ class HealthCheckResponse(BaseModel):
     advice: str
 
 class BurnActivity(BaseModel):
-    activity: str   # Contoh: "Lari Jogging"
-    duration: str   # Contoh: "45 menit"
-    intensity: str  # Contoh: "Sedang"
+    activity: str  
+    duration: str  
+    intensity: str  
 
 class BurnCaloriesResponse(BaseModel):
     menu_name: str
     calories: int
     exercises: List[BurnActivity]           
+
